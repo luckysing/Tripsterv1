@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/gas"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/colorPrimary"
+        android:drawableTop="@drawable/selector_gas"
+        android:onClick="onGasClicked"
+        android:text="gas"
+        android:textColor="#e8e9e9"
+        app:layout_constraintBottom_toTopOf="@+id/search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.034"
+        app:layout_constraintStart_toEndOf="@+id/hotel"
+        app:layout_constraintTop_toBottomOf="@+id/destination_address"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <Button
+        android:id="@+id/hotel"
+        android:layout_width="61dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@color/colorPrimary"
+        android:drawableTop="@drawable/selector_hotel"
+        android:onClick="onHotelClicked"
+        android:text="hotel"
+        android:textColor="#e8e9e9"
+        app:layout_constraintBottom_toTopOf="@+id/search"
+        app:layout_constraintStart_toEndOf="@+id/food"
+        app:layout_constraintTop_toBottomOf="@+id/destination_address"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <Button
+        android:id="@+id/food"
+        android:layout_width="61dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@color/colorPrimary"
+        android:drawableTop="@drawable/selector_food"
+        android:onClick="onFoodClicked"
+        android:text="food"
+        android:textColor="#e8e9e9"
+        app:layout_constraintBottom_toTopOf="@+id/search"
+        app:layout_constraintStart_toEndOf="@+id/cafe"
+        app:layout_constraintTop_toBottomOf="@+id/destination_address"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <Button
+        android:id="@+id/cafe"
+        android:layout_width="61dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="28dp"
+        android:background="@color/colorPrimary"
+        android:drawableTop="@drawable/selector_cafe"
+        android:onClick="onCafeClicked"
+        android:text="Cafe"
+        android:textColor="#e8e9e9"
+        app:layout_constraintBottom_toBottomOf="@+id/hotel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/hotel"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <AutoCompleteTextView
+        android:id="@+id/destination_address"
+        android:layout_width="271dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/source"
+        android:layout_alignStart="@+id/source_address"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="28dp"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/source_address" />
+
+    <TextView
+        android:id="@+id/source"
+        android:layout_width="82dp"
+        android:layout_height="26dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/destination"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="From : "
+        app:layout_constraintEnd_toStartOf="@+id/source_address"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <AutoCompleteTextView
+        android:id="@+id/source_address"
+        android:layout_width="271dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/source"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/destination"
+        android:layout_width="82dp"
+        android:layout_height="23dp"
+        android:layout_alignBottom="@+id/source_address"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="To : "
+        app:layout_constraintEnd_toStartOf="@+id/destination_address"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/source" />
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="349dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="onSearch"
+        android:text="@string/search"
+        android:theme="@style/PrimaryButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
